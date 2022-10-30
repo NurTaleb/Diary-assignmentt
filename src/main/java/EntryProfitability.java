@@ -19,6 +19,8 @@ public class EntryProfitability {
     private static final Path path = Paths.get("src/main/resources/EveryDiary.json");
 
 
+
+
     static {
         try {
             EntryFromJSON = List.of(objectmapper.readValue(path.toFile(), DiaryEntry[].class));
@@ -28,13 +30,21 @@ public class EntryProfitability {
     }
 
 
-
+    /**
+     * This method prints out menu for the user
+     */
     public static void EntryCreating() {
         String Option1 = "Hello dear reader, welcome to my diary, " +
                 "if you be kind choose one option between 1-3. Thank you!";
         System.out.println(Option1);
     }
 
+
+    /**
+     * This is needed for readValue.
+     * This method reads post from Json-file
+     * @throws IOException
+     */
     public static void AllEntriesShouldBeRead() throws IOException {
 
         List<DiaryEntry> allJsonEntries = List.of(objectmapper.readValue(path.toFile(), DiaryEntry[].class));
@@ -46,6 +56,9 @@ public class EntryProfitability {
         }
     }
 
+    /**
+     * This method prints out menu for the user
+     */
     public static void MenuChoicesPrintOut () {
         String Option2 = "1: Read entires";
         String Option3 = "2: Write a new entry";
@@ -54,6 +67,10 @@ public class EntryProfitability {
 
     }
 
+    /**
+     * Users posts will be saved in json file
+     * @throws IOException
+     */
     public static void EntriesAddedIntoJson() throws IOException{
         EntryFromJSON = List.of(objectmapper.readValue(path.toFile(),
                 DiaryEntry[].class));
@@ -64,6 +81,9 @@ public class EntryProfitability {
                 (path.toFile(), Entries);
     }
 
+    /**
+     * Reads if the user writes wrong
+     */
     public static void WrongChoice() {
         String Option5 = "Sorry to inform you but this is not available, " +
                 "be kind and choose a number between 1-3 thanks!";
@@ -71,7 +91,9 @@ public class EntryProfitability {
     }
 
 
-
+    /**
+     * This method implies to say bye
+     */
 
     public static void printGoodbyeMessage() {
 
@@ -80,6 +102,11 @@ public class EntryProfitability {
         System.out.println(Option4);
     }
 
+    /**
+     * User can write posts
+     *
+     * @return
+     */
 
     private static DiaryEntry AnWritenEntry() {
 
