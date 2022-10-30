@@ -95,7 +95,7 @@ public class EntryProfitability {
      * This method implies to say bye
      */
 
-    public static void printGoodbyeMessage() {
+    public static void ThisPrintGoodBye() {
 
         String Option4 = "The diary have come to an end and will be closed";
 

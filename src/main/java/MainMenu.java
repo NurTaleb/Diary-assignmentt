@@ -39,7 +39,7 @@ public class MainMenu {
                 }
             } while (menuOption != 3);
 
-            EntryProfitability.printGoodbyeMessage();
+            EntryProfitability.ThisPrintGoodBye();
             System.out.println(4);
 
 
