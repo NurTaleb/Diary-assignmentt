@@ -1,4 +1,9 @@
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class DiaryEntry {
+    public DiaryEntry () {}
     private String TitleOfEntry;
     private String ContentOfEntry;
     private String DateOfEntry;
@@ -40,6 +45,9 @@ public class DiaryEntry {
                 ", ContentOfEntry='" + ContentOfEntry + '\'' +
                 ", DateOfEntry='" + DateOfEntry + '\'' +
                 '}';
+
+
+
     }
 }
 

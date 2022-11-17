@@ -1,3 +1,4 @@
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -13,6 +14,9 @@ public class EntryProfitability {
     private static final Scanner scanner = new Scanner(System.in);
 
     private static final ObjectMapper objectmapper = new ObjectMapper();
+    private byte[] jsonString;
+    DiaryEntry diaryObjectmapper = objectmapper.readValue(jsonString, DiaryEntry.class);
+
 
     private static List<DiaryEntry> EntryFromJSON;
 
@@ -29,15 +33,9 @@ public class EntryProfitability {
         }
     }
 
-
-    /**
-     * This method prints out menu for the user
-     */
-    public static void EntryCreating() {
-        String Option1 = "Hello dear reader, welcome to my diary, " +
-                "if you be kind choose one option between 1-3. Thank you!";
-        System.out.println(Option1);
+    public EntryProfitability() throws IOException {
     }
+
 
 
     /**
@@ -97,7 +95,7 @@ public class EntryProfitability {
 
     public static void ThisPrintGoodBye() {
 
-        String Option4 = "The diary have come to an end and will be closed";
+        String Option4 = "The diary have come to an end and will be closed. Have a nice day!";
 
         System.out.println(Option4);
     }

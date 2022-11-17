@@ -1,3 +1,6 @@
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.Scanner;
 
 
@@ -10,10 +13,11 @@ public class MainMenu {
             Scanner scanner = new Scanner(System.in);
             int menuOption;
 
+
             do {
                 System.out.println("Hello, there be want to read my diary, if so be kind and press the options" +
                         " 1-3. Thanks!");
-                EntryProfitability.EntryCreating();
+
                 EntryProfitability.MenuChoicesPrintOut();
                 menuOption = scanner.nextInt();
                 switch (menuOption) {
@@ -40,7 +44,7 @@ public class MainMenu {
             } while (menuOption != 3);
 
             EntryProfitability.ThisPrintGoodBye();
-            System.out.println(4);
+
 
 
         }
